@@ -47,14 +47,16 @@
       ship_add1: $("#inputAddress").val().trim(),
       ship_add2: $("#inputAddress2").val().trim(),
       ship_city: $("#inputCity").val().trim(),
-      ship_state: $("#inputState").val().trim(),
+      ship_state: $("#inputState option:selected").text(),
       ship_zip: $("#inputZip").val().trim(),
       bill_add1: $("#bAddress").val().trim(),
       bill_add2: $("#bAddress2").val().trim(),
       bill_city: $("#bCity").val().trim(),
-      bill_state: $("#bState").val().trim(),
+      bill_state: $("#bState option:selected").text(),
       bill_zip: $("#bZip").val().trim()
     }
+
+    alert("success" + user.ship_state);
 
     if (!user.email || !user.password) { return };
     signUpUser(user);
