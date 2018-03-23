@@ -56,8 +56,6 @@
       bill_zip: $("#bZip").val().trim()
     }
 
-    alert("success" + user.ship_state);
-
     if (!user.email || !user.password) { return };
     signUpUser(user);
   });
